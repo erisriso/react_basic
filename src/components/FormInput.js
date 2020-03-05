@@ -32,11 +32,18 @@ class FormInput extends Component {
    handleChange = e =>{
     this.setState({
         [e.target.name] : e.target.value
-    })
-}
+        })
+    };
+
+
+    handleSubmit = e => {
+        console.log("halo dodol");
+        e.prventDefault();
+    };
+
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
             <div>
                 <p>Nama saya: {this.state.nama}</p>
                 <input type="text" name="nama" value={this.state.nama} onChange={this.handleChange}/>
