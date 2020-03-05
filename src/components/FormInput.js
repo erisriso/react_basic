@@ -36,6 +36,7 @@ class FormInput extends Component {
 }
     render() {
         return (
+            <form>
             <div>
                 <p>Nama saya: {this.state.nama}</p>
                 <input type="text" name="nama" value={this.state.nama} onChange={this.handleChange}/>
@@ -52,10 +53,12 @@ class FormInput extends Component {
                     <option value="Lexus">Lexus</option>
                 </select>
                 <p>Jenis kelamin: {this.state.jeniskelamin}</p>
-                <input type="radio" name="jeniskelamin" value="laki-laki" id="" onChange={this.handleChange} checked={this.state.jeniskelamin=='laki-laki' ? true : false}/>Laki-laki
-                <input type="radio" name="jeniskelamin" value="perempuan" id="" onChange={this.handleChange} checked={this.state.jeniskelamin=='perempuan' ? true : false}/>Perempuan
-
+                <input type="radio" name="jeniskelamin" value="laki-laki" id="" onChange={this.handleChange} checked={this.state.jeniskelamin==='laki-laki' ? true : false}/>Laki-laki
+                <input type="radio" name="jeniskelamin" value="perempuan" id="" onChange={this.handleChange} checked={this.state.jeniskelamin==='perempuan' ? true : false}/>Perempuan
+                <br/><br/>
+                <button type="submit">Kirim Data</button>
             </div>
+            </form>
         );
     }
 }
